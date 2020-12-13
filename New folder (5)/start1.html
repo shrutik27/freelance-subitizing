@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .fade {
+  -webkit-animation: seconds 1.0s forwards;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-delay: 5s;
+  animation: seconds 1.0s forwards;
+  animation-iteration-count: 1;
+  animation-delay:2s;
+  position: relative;
+}
+@-webkit-keyframes seconds {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    left: -9999px; 
+  }
+}
+@keyframes seconds {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    left: -9999px; 
+  }
+}
+.visibilityDiv {
+    animation: showBlock 0s 2.3s forwards;
+    visibility: hidden;
+}
+ 
+@keyframes showBlock {
+    to { visibility: visible; }
+}
+
+      #box:checked + img {
+        height:0px;
+        width:0px;
+      }
+      #right:checked + img {
+       background-color: green;
+       border-color:green;
+       border-style: solid;
+       border-width:30px;
+      }
+    </style>
+  
+</head>
+<body style="background: rgb(255, 255, 203);">
+    <div class="fade"><img src="./images/dice2.png"style="padding-left:45%;padding-top:60px;"></div>
+    <div class="visibilityDiv " style="justify-content: space-around;">
+        <p style="font-size: 60px;color:blue;margin-left:35%;position:fixed;top:0;"><b>How many<br>dots you see?</b> </p>
+        <div style="padding-top:100px;padding-left:30%;">
+        <input type="radio" id="box" />
+        <img id="box"for="box"src="images/dice1.png">
+        <input type="radio" id="right" />
+        <img id="right"for="right"src="images/dice2.png"> 
+        <input type="radio" id="box" />
+        <img id="box"for="box"src="images/dice3.png">
+    </div>
+    <div class="control"style="padding-top:100px;margin-left:20%;display:flex;flex-direction:row;justify-content:space-around;margin-right:20%;">
+        <a href="index.html"><img src="./images/home_pic.gif"></a>
+        <a href="start1.html"><img src="./images/repeat_pic.gif"></a>
+        <a href="display1.html"><img src="./images/display_pic.gif"></a>
+        <a href="start2.html"><img src="./images/new_pic.gif"></a>
+    </div>
+    </div>
+
+</body>
+</html>
